@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<th:block layout:fragment="script">
+
+    <script th:inline="javascript">
+        alert("관리자로 로그인해 주세요");
+        location.href="/member/login";
+    </script>
+
+</th:block>
+
+<div layout:fragment="content">
+
+</div>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        >
+        <!---->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPRING BOOT SHOPPING MALL</title>
+  <!-- 부트스트랩 CDN 링크 추가 "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"-->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" rel="stylesheet">
+  <style>
+  
+    html{
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+}
+body{
+	min-height: 100%;
+}
+.footer{
+	position: absolute;
+	left: 0; right: 0; bottom: 0;
+	width: 100%; padding: 15px 0; text-align: center;
+}
+.content{
+	margin-bottom: 100px; margin-top: 50px;
+	margin-left: 200px; margin-right: 200px;
+}
+  
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+  
+  
+    /* 전체 페이지를 채울 수 있는 높이 지정 */
+    html,
+    body {
+      height: 100%;
+      font-family: '맑은 고딕', sans-serif; /* 모든 글꼴을 '맑은 고딕'으로 설정 */
+    }
+
+    /* Header, Body, Footer의 높이 지정 */
+    header, footer {
+      height: 10%;
+    }
+
+    body {
+      background-color: #fff; /* 배경색을 흰색으로 설정 */
+      margin: 0; /* 기본 마진 제거 */
+      padding: 0; /* 기본 패딩 제거 */
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-light">
+    <!-- 여기에 헤더 내용 추가 -->
+    <div th:replace="~{fragments/header::header}"></div>
+  </header>
+
+  <main class="container-fluid">
+    <!-- 여기에 본문 내용 추가 -->
+    <div layout:fragment="content" class="content">
+
+  </main>
+
+  <footer class="bg-light">
+    <!-- 여기에 푸터 내용 추가 -->
+    <div th:replace="~{fragments/footer::footer}"></div>
+  </footer>
+
+  <!-- 부트스트랩 스크립트 CDN 추가 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
